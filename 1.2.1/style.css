@@ -1,0 +1,27 @@
+form {
+  background: #fff;
+  border: 1px #444 solid;
+  padding: 10px;
+}
+
+label {
+  font-family: 'Helvetica Neue';
+  font-size: 1.6rem;
+  font-weight: lighter;
+}
+
+#title,
+#content {
+  width: 80%;
+  border: 1px #ccc solid;
+  padding: 5px;
+}
+
+#title {
+  font-size: 1.2rem
+}
+
+#content {
+  font-size: 1rem;
+  min-height: 4rem;
+}
