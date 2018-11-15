@@ -25,11 +25,13 @@
 var forms = document.forms,
     form1 = forms[0];
 
-//console.log( forms );
-//console.log( form1 );
+console.log( forms );
+console.log( form1 );
 
 for ( var i = 0, max = form1.length; i < max ; i++ ) {
+    
     console.log(form1[i]);
+
 }
 
 
