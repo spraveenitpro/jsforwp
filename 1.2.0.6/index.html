@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    /* Numbers */
+
+        var a = 4;
+        var b = 5;
+
+        c = a + b;
+        console.log('a + b = ' + c);
+        c = a - b;
+        console.log('a - b = ' + c);
+        c = a * b;
+        console.log('a * b = ' + c);
+        c = a / b;
+        console.log('a / b = ' +c);
+
+        var e = 3.3333;
+        console.log(e.toFixed(2));
+
+        d = a + parseFloat(e);
+        console.log(d);
+
+        console.log( Math.PI);
+
+        var g = 3.33333;
+        var h = 3.88888;
+        console.log(Math.round(g));
+        console.log(Math.round(h));
+        var i = Number.POSITIVE_INFINITY,
+            j = 1000000000,
+            k = -333333333;
+
+        console.log(Math.min(g,h,i,j,k));
+        console.log(Math.max(g,h,i,j,k));
+
+
+        /* Objects */
+
+    var post = {
+
+      id: 2,
+      title: "hello world"
+    };
+
+    post.newtitle="Another hellow world";
+    post.slug="nad";
+    console.log('Post' + post);
+    console.log('Post' , post);
+
+    /* Array */
+
+    var array1 = [];
+    var array2 = [1,2,3,4,5,6];
+
+    console.log(array2);
+
+    var posts = [
+        {
+            id : 1,
+            title : "hello world"
+        },
+        {
+            id : 2,
+            title : "hello JS"
+        },
+        {
+            id : 3,
+            title : "hello gutenberg"
+        }
+
+    ];
+    console.log(posts);
+
+    var postIds = [23,43,12,45,32,22,78,33];
+    postIds.push(77);
+    console.log(postIds);
+    postIds.push(74,44);
+    console.log(postIds);
+    postIds.unshift(32);
+    console.log(postIds);
+    postIds.pop();
+    console.log(postIds);
+    console.log(postIds.length);
+    postIds.sort();
+    console.log(postIds);
+    postIds.reverse();
+    console.log(postIds);
+
+
+    var postTitles = ['javascript', 'wordpress', 'PHP'];
+
+    postTitles.forEach(function (title) {
+       console.log('Title: ' + title);
+    });
+
+
+    /*
+        Operators
+     */
+
+    var username = 'spraveenitpro',
+        x = 4,
+        y= 8;
+
+    x += y;
+    console.log(x);
+    x *= y;
+    console.log(x);
+    x /= y;
+    console.log(x);
+
+
+    var isLoggedIn = true,
+        currentPostId = 500,
+        userRole = 1;
+
+    if (true === isLoggedIn) {
+        console.log("show dashboard");
+    }
+
+    if (2 > userRole) {
+        console.log("Show admin options");
+    }
+
+    if (1 !== userRole){
+        console.log("Not an admin");
+    }
+
+    html = "";
+    html += "<ul>";
+    html += "<li>Name:</li>";
+    html += "<li>Address:</li>";
+    html += "</ul>";
+    console.log(html);
+
+
+    var post = {
+        status: 'published'
+    },
+        displaypost;
+
+    displaypost = ('published' === post.status) ? true:false;
+    console.log (displaypost);
+    console.log(post);
+
+    /*
+        Loops
+
+     */
+
+    for (var i = 1; i < 10 ; i++ ) {
+        console.log(i);
+    }
+
+    var postIds = [3,45,23,1,345,76,4],
+        i = 0,
+        max = postIds.length;
+
+    do {
+        console.log(postIds[i]);
+        i++;
+    } while ( i < max);
+
+    var signedUp = false,
+        askAgain = true;
+
+    do {
+        signUp = window.confirm( 'Sign Up!' );
+    } while ( false === signUp && true === askAgain );
+
+    /*
+    Functions
+     */
+
+    function displayPost() {
+        console.log('post title');
+        console.log('post content');
+    }
+
+    displayPost();
+
+    var displayTitle = function() {
+
+        console.log("Functions");
+    };
+
+    var displayExcerpt = function() {
+        console.log("..Read More...");
+    };
+
+    var displayPost = function() {
+
+        displayTitle();
+        displayExcerpt();
+
+    };
+
+    var getPostTitle = function() {
+
+        var title = 3434;
+
+        return title;
+    };
+
+    var title = getPostTitle();
+
+    console.log(title);
+
+    var post = {
+
+        id:2,
+        title: 'Hello JavaScript',
+        getTitleMarkup: function(tag) {
+
+            var markup = '';
+            markup += '<' + tag + '>';
+            markup += post.title;
+            markup += '</' + tag + '>';
+
+            return markup;
+
+        }
+    };
+
+    var titleHTML = post.getTitleMarkup('h2');
+    console.log( titleHTML );
+
+
+    var post = {
+        id:2,
+        title: 'hello js'
+    };
+
+    post.displayTitle = function() {
+      console.log(this.title);
+    };
+
+    post.displayTitle();
+
+</script>
+
+</body>
+</html>
